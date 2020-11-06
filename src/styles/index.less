@@ -1,0 +1,80 @@
+@import "_reset";
+@import "_variable";
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  // background-color: rgba(251, 251, 251, 1);
+}
+
+body {
+  color: @label_color;
+  font-family: @font-family-base;
+  font-size: @font-size-base !important;
+  overflow-wrap: break-word;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+
+.container {
+  // display: -moz-box; /* Firefox */
+  // display: -ms-flexbox; /* IE10 */
+  // display: -webkit-box; /* Safari */
+  // display: -webkit-flex; /* Chrome, WebKit */
+  // display: box;
+  // display: flexbox;
+  // display: flex;
+  // display: flex;
+  // display: -webkit-flex;
+  display: flexbox;
+  flex: 1;
+
+  > div {
+    width: 100%;
+  }
+}
+
+// 返回
+.back {
+  background: url("../static/images/back.png") no-repeat center;
+  background-size: 0.24rem;
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
+
+@iconWidth: 0.25rem;
+@color: #fff;
+
+.arrow-mixin {
+  width: @iconWidth;
+  height: @iconWidth;
+  display: inline-block;
+  border-left: 1px solid @color;
+  border-top: 1px solid @color;
+}
+
+.arrow-left {
+  transform: rotate(-45deg);
+  .arrow-mixin;
+}
+
+.arrow-right {
+  transform: rotate(135deg);
+  .arrow-mixin;
+}
+
+#nprogress .spinner {
+  top: 50%;
+  left: 48%;
+}

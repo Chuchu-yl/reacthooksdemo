@@ -1,6 +1,12 @@
 import React from "react";
-import ReactDom from "react-dom";
-// import DemoClass from "./demoClass";
-import DemoFun from "./demoFun";
+import ReactDOM from "react-dom";
+import "./index.css";
+import "./utils/rem";
+import App from "./App";
 
-ReactDom.render(<DemoFun />, document.getElementById("root"));
+ReactDOM.render(
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>
+  document.getElementById("root")
+);
