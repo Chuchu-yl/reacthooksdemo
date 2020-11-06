@@ -8,7 +8,7 @@ import "./style.less";
 
 export class Home extends Component {
   state = {
-    active: 1,
+    active: 2,
   };
   activeFun = (num) => {
     this.setState({
@@ -119,7 +119,7 @@ export class Home extends Component {
               <Route exact path="/first" component={FirstPage}></Route>
               <Route path="/second" component={SecondPage}></Route>
               <Route path="/third" component={ThirdPage}></Route>
-              <Redirect exact from="/" to="/first"></Redirect>
+              <Redirect exact from="/" to="/second"></Redirect>
             </Switch>
           </div>
         </div>
