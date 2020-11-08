@@ -57,12 +57,17 @@ export class FirstPage extends Component {
       <div className="firstwrap">
         {/* 时间间隔文字 */}
         <div className="timecontrol">
-          <p></p>
-          <p>
-            <span id="day"></span>/<span id="hour"></span>/
-            <span id="minu"></span>/<span id="sec"></span>
-          </p>
-          <p></p>
+          <div className="text">
+          <div>我们在一起</div><br></br>
+          <div>
+           ❤ <span id="day"></span>天<span id="hour"></span>时
+            <span id="minu"></span>分<span id="sec"></span>秒
+            ❤
+          </div>
+          <br></br>
+          <div>啦~</div>
+          </div>
+          
         </div>
       </div>
     );

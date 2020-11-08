@@ -17,12 +17,12 @@ export class Home extends Component {
   };
   render() {
     const { active } = this.state;
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="home">
         <div className="container">
           <div className="bannerwrap">
-            {/* <div className="line"></div>
+            <div className="line"></div>
             <div className="bannerinner">
               <img
                 className="img1"
@@ -112,7 +112,7 @@ export class Home extends Component {
             </div>
             <div className="fireworks2">
               <img src={require("../../static/image/fireworks.png").default} />
-            </div> */}
+            </div>
           </div>
           <div className="innerpage">
             <Switch>
