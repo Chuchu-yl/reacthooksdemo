@@ -3,23 +3,47 @@ import { Route, Switch, Redirect, NavLink } from "react-router-dom";
 import FirstPage from "../FirstPage";
 import SecondPage from "../SecondPage";
 import ThirdPage from "../ThirdPage";
+import { Toast } from "antd-mobile";
 
 import "./style.less";
-
+function offline() {
+  Toast.offline("哎呀，还没有想好做什么呢，可以私下告诉我哦~", 3);
+}
 export class Home extends Component {
   state = {
     active: 2,
+    cakesShow: false,
   };
   activeFun = (num) => {
     this.setState({
       active: num,
     });
   };
+  cakeShow = (e) => {
+    // 两秒执行一次
+    this.setState({
+      cakesShow: true,
+    });
+    e.stopPropagation();
+    setTimeout(() => {
+      this.setState({
+        cakesShow: false,
+      });
+    }, 3000);
+  };
+
   render() {
-    const { active } = this.state;
-    console.log(this.props);
+    const { active, cakesShow } = this.state;
+    // console.log(this.props);
     return (
-      <div className="home">
+      <div
+        className="home"
+        onClick={() => {
+          return this.setState({
+            cakesShow: false,
+          });
+        }}
+      >
         <div className="container">
           <div className="bannerwrap">
             {/* <div className="line"></div>
@@ -122,6 +146,34 @@ export class Home extends Component {
               <Redirect exact from="/" to="/second"></Redirect>
             </Switch>
           </div>
+          {/* 蛋糕 */}
+          {cakesShow && (
+            <div className="cakes">
+              <img
+                width="100px"
+                height="100px"
+                src={require("../../static/image/cake1.png").default}
+              />
+            </div>
+          )}
+        </div>
+        <div
+          className="button"
+          style={{
+            width: "40px",
+            height: "40px",
+            // backgroundColor: "greenyellow",
+            position: "absolute",
+            bottom: "8%",
+            right: "0px",
+          }}
+          onClick={this.cakeShow}
+        >
+          <img
+            widt="40px"
+            height="40px"
+            src={require("../../static/image/cake2.png").default}
+          />
         </div>
         <div className="footerbutton">
           <div
@@ -161,7 +213,14 @@ export class Home extends Component {
           <div
             className="star"
             onClick={() => {
-              return this.props.history.push("third"), this.activeFun(3);
+              return (
+                offline(),
+                this.activeFun(3),
+                setTimeout(() => {
+                  this.activeFun(2);
+                }, 3000)
+              );
+              // return this.props.history.push("third"), this.activeFun(3);
             }}
           >
             {/* <span> */}
