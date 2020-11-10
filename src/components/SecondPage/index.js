@@ -8,6 +8,9 @@ export class SecondPage extends Component {
   state = {
     textArr: [],
     textArrtwo: [],
+    picShow: false, // 点击图片的下标
+    currentIndex: [],
+    currentIndextwo: [],
   };
   componentDidMount() {
     this.swiperFun();
@@ -24,7 +27,7 @@ export class SecondPage extends Component {
       method: "get",
       url: "/textimg2",
     }).then((res) => {
-      console.log(res.data.data);
+      // console.log(res.data.data);
       this.setState({
         textArrtwo: res.data.data,
       });
@@ -44,13 +47,69 @@ export class SecondPage extends Component {
     });
   };
   // 点击放大图片
-  imgBig = () => {};
+  imgBig = (e) => {
+    // let arr = []
+    // arr.push(e.target.dataset.value);
+    this.state.currentIndex.push(e.target.dataset.value);
+    let img = document.querySelectorAll(".imgOne")[e.target.dataset.value];
+    img.style.width = "200px";
+    img.style.height = "200px";
+    img.style.position = "absolute";
+    img.style.left = "0";
+    img.style.right = "0";
+    img.style.margin = "auto";
+    console.log(img);
+
+    // e.stopPropagation();
+  };
+  imgBig2 = (e) => {
+    this.state.currentIndextwo.push(e.target.dataset.value);
+    // if (this.state.picShow) {
+    let img = document.querySelectorAll(".imgTwo")[e.target.dataset.value];
+    img.style.width = "200px";
+    img.style.height = "200px";
+    img.style.position = "absolute";
+    img.style.left = "0";
+    img.style.right = "0";
+    img.style.margin = "auto";
+    console.log(img);
+  };
+  returnFun = () => {
+    console.log("111111111111", this.state.currentIndex);
+
+    for (var i in this.state.currentIndex) {
+      let img = document.querySelectorAll(".imgOne")[i];
+      if (img) {
+        img.style.width = "30px";
+        img.style.height = "30px";
+        img.style.position = "";
+        img.style.left = "";
+        img.style.right = "";
+        img.style.margin = "";
+      }
+    }
+    for (var j in this.state.currentIndextwo) {
+      let img = document.querySelectorAll(".imgTwo")[j];
+      if (img) {
+        img.style.width = "30px";
+        img.style.height = "30px";
+        img.style.position = "";
+        img.style.left = "";
+        img.style.right = "";
+        img.style.margin = "";
+      }
+    }
+  };
   render() {
     const { textArr, textArrtwo } = this.state;
-    console.log(textArr);
-    // var url = require("../../static/image/sun.png").default;
+    // console.log(textArr);
+
     return (
-      <div className="secondpage" style={{ height: "700px" }}>
+      <div
+        className="secondpage"
+        style={{ height: "700px" }}
+        onClick={this.returnFun}
+      >
         {/* 照片轮播图 */}
         <div
           className="picbanner"
@@ -85,11 +144,15 @@ export class SecondPage extends Component {
                 return (
                   <div key={index} className="textwrap">
                     {/* 文字 */}
-                    <div className="text">{item.text}</div>
+                    <div className="text">{item.year}</div>
                     <div className="text">{item.text}</div>
                     <div className="imgwrap">
                       <img
-                        onClick={() => this.imgBig()}
+                        data-value={index}
+                        className="imgOne"
+                        onClick={(e) => {
+                          return this.imgBig(e), e.stopPropagation();
+                        }}
                         src={item.img}
                         width="30px"
                         height="30px"
@@ -105,12 +168,18 @@ export class SecondPage extends Component {
                 return (
                   <div key={index} className="textwrap">
                     {/* 文字 */}
+                    <div className="text">{item.year}</div>
                     <div className="text">{item.text}</div>
                     <div className="imgwrap">
                       <img
-                        src={require("../../static/image/sun.png").default}
-                        width="20px"
-                        height="20px"
+                        data-value={index}
+                        className="imgTwo"
+                        onClick={(e) => {
+                          return this.imgBig2(e), e.stopPropagation();
+                        }}
+                        src={item.img}
+                        width="30px"
+                        height="30px"
                       />
                     </div>
                   </div>
