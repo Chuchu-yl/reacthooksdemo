@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./components/Home";
+import "../src/mock/mock";
 // import FirstPage from "./components/FirstPage";
 import "./App.less";
 
