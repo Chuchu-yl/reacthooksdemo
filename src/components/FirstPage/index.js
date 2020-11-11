@@ -56,14 +56,14 @@ export class FirstPage extends Component {
         {/* 时间间隔文字 */}
         <div className="timecontrol">
           <div className="textwrap">
-            <div>你好呀</div>
+            <div>我们在一起</div>
             <br></br>
             <div>
-              <span id="day">{days}</span>/<span id="hour">{hours}</span>/
-              <span id="minu">{minutes}</span>/<span id="sec">{seconds}</span>
+             ❤ <span id="day">{days} </span>天<span id="hour">{hours}</span>时
+              <span id="minu">{minutes} </span>分<span id="sec">{seconds}</span>秒 ❤
             </div>
             <br></br>
-            <div>我不好</div>
+            <div>2018-4-2</div>
           </div>
         </div>
       </div>

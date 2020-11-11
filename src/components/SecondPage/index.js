@@ -108,23 +108,48 @@ export class SecondPage extends Component {
         {/* 照片轮播图 */}
         <div
           className="picbanner"
-          style={{ width: "100%", height: "200px", background: "yellowgreen" }}
+          style={{ width: "100%", height: "250px"}}
         >
           <div className="swiper-container">
             <div className="swiper-wrapper">
+              {/* <div className="swiper-slide">
+               
+                <img src={require("../../static/image2/one.png").default} />
+              </div> */}
+              {/* <div className="swiper-slide">
+               
+                <img src={require("../../static/image2/two.png").default} />
+              </div> */}
               <div className="swiper-slide">
-                slide1
-                {/* <img src={require("../../static/image2/kenan.jpg").default} /> */}
+                {" "}
+                {/* slide3 */}
+                <img src={require("../../static/image2/four.png").default} />
               </div>
               <div className="swiper-slide">
                 {" "}
-                slide2
-                {/* <img src={require("../../static/image2/modao.jpg").default} /> */}
+                {/* slide3 */}
+                <img src={require("../../static/image2/three.png").default} />
+                
               </div>
               <div className="swiper-slide">
                 {" "}
-                slide3
-                {/* <img src={require("../../static/image2/andaji.png").default} /> */}
+                {/* slide3 */}
+                <img src={require("../../static/image2/five.png").default} />
+              </div>
+              <div className="swiper-slide">
+                {" "}
+                {/* slide3 */}
+                <img src={require("../../static/image2/six.png").default} />
+              </div>
+              <div className="swiper-slide">
+                {" "}
+                {/* slide3 */}
+                <img src={require("../../static/image2/seven.png").default} />
+              </div>
+              <div className="swiper-slide">
+                {" "}
+                {/* slide3 */}
+                <img src={require("../../static/image2/eight.png").default} />
               </div>
             </div>
             <div className="swiper-pagination"></div>

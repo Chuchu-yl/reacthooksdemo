@@ -49,7 +49,7 @@ export class Home extends Component {
             ""
           ) : (
             <div className="bannerwrap">
-              {/* <div className="line"></div>
+              <div className="line"></div>
               <div className="bannerinner">
                 <img
                   className="img1"
@@ -147,7 +147,7 @@ export class Home extends Component {
                 <img
                   src={require("../../static/image/fireworks.png").default}
                 />
-              </div> */}
+              </div>
             </div>
           )}
 
@@ -204,7 +204,7 @@ export class Home extends Component {
               }
             />
             {/* </span> */}
-            <a className={active === 1 ? "active" : ""}>首页</a>
+            <a className={active === 1 ? "active" : ""}>时间戳</a>
           </div>
           <div
             className="sun"
@@ -221,7 +221,7 @@ export class Home extends Component {
               }
             />
             {/* </span> */}
-            <a className={active === 2 ? "active" : ""}>二页</a>
+            <a className={active === 2 ? "active" : ""}>我的</a>
           </div>
           <div
             className="star"
@@ -245,7 +245,7 @@ export class Home extends Component {
               }
             />
             {/* </span> */}
-            <a className={active === 3 ? "active" : ""}>末页</a>
+            <a className={active === 3 ? "active" : ""}>别看</a>
           </div>
         </div>
       </div>
