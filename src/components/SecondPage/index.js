@@ -48,58 +48,53 @@ export class SecondPage extends Component {
   };
   // 点击放大图片
   imgBig = (e) => {
-    // let arr = []
-    // arr.push(e.target.dataset.value);
-    this.state.currentIndex.push(e.target.dataset.value);
     let img = document.querySelectorAll(".imgOne")[e.target.dataset.value];
     img.style.width = "200px";
     img.style.height = "200px";
     img.style.position = "absolute";
     img.style.left = "0";
     img.style.right = "0";
+    img.style.top = "0";
+    img.style.bottom = "0";
     img.style.margin = "auto";
-    console.log(img);
-
-    // e.stopPropagation();
   };
   imgBig2 = (e) => {
-    this.state.currentIndextwo.push(e.target.dataset.value);
-    // if (this.state.picShow) {
+    // this.state.currentIndextwo.push(e.target.dataset.value);
     let img = document.querySelectorAll(".imgTwo")[e.target.dataset.value];
     img.style.width = "200px";
     img.style.height = "200px";
     img.style.position = "absolute";
     img.style.left = "0";
     img.style.right = "0";
+    img.style.top = "0";
+    img.style.bottom = "0";
     img.style.margin = "auto";
-    console.log(img);
+    // console.log(img);
   };
   returnFun = () => {
     console.log("111111111111", this.state.currentIndex);
-
-    for (var i in this.state.currentIndex) {
-      let img = document.querySelectorAll(".imgOne")[i];
-      if (img) {
-        img.style.width = "30px";
-        img.style.height = "30px";
-        img.style.position = "";
-        img.style.left = "";
-        img.style.right = "";
-        img.style.margin = "";
-      }
+    let img = document.querySelectorAll(".imgOne");
+    console.log(img);
+    for (var i = 0; i < img.length; i++) {
+      img[i].style.width = "30px";
+      img[i].style.height = "30px";
+      img[i].style.position = "";
+      img[i].style.left = "";
+      img[i].style.right = "";
+      img[i].style.margin = "";
     }
-    for (var j in this.state.currentIndextwo) {
-      let img = document.querySelectorAll(".imgTwo")[j];
-      if (img) {
-        img.style.width = "30px";
-        img.style.height = "30px";
-        img.style.position = "";
-        img.style.left = "";
-        img.style.right = "";
-        img.style.margin = "";
-      }
+
+    let imgtwo = document.querySelectorAll(".imgTwo");
+    for (var j = 0; j < imgtwo.length; j++) {
+      imgtwo[j].style.width = "30px";
+      imgtwo[j].style.height = "30px";
+      imgtwo[j].style.position = "";
+      imgtwo[j].style.left = "";
+      imgtwo[j].style.right = "";
+      imgtwo[j].style.margin = "";
     }
   };
+
   render() {
     const { textArr, textArrtwo } = this.state;
     // console.log(textArr);

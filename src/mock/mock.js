@@ -6,25 +6,25 @@ Mock.mock("/textimg", {
       year: "1995-11-20",
       text: "~",
       // text: "靓哥出生啦~",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-liangBaby.jpg").default,
     },
 
     {
       year: "2018-4-2",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-together.jpg").default,
     },
 
     {
       year: "2018-11-5",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-firstBirthday.jpg").default,
     },
 
     {
       year: "2019-4-8",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-beijing.jpg").default,
     },
     {
       year: "2019-10-25",
@@ -34,7 +34,7 @@ Mock.mock("/textimg", {
     {
       year: "2020-7-4",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-tianjin.jpg").default,
     },
   ],
 });
@@ -45,7 +45,7 @@ Mock.mock("/textimg2", {
       year: "1997-2-7",
       text: "~",
       // text: "初初出生啦~",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-chuBaby.jpg").default,
     },
     {
       year: "2018-10-30",
@@ -60,7 +60,7 @@ Mock.mock("/textimg2", {
     {
       year: "2019-4-14",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-beijing2.jpg").default,
     },
 
     {
@@ -72,7 +72,7 @@ Mock.mock("/textimg2", {
     {
       year: "2020-9-15",
       text: "",
-      img: require("../static/image/sun.png").default,
+      img: require("../static/image2/f-target.jpg").default,
     },
   ],
 });

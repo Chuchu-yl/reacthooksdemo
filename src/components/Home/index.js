@@ -34,7 +34,7 @@ export class Home extends Component {
 
   render() {
     const { active, cakesShow } = this.state;
-    // console.log(this.props);
+    console.log(this.props.location.pathname);
     return (
       <div
         className="home"
@@ -45,99 +45,112 @@ export class Home extends Component {
         }}
       >
         <div className="container">
-          <div className="bannerwrap">
-            {/* <div className="line"></div>
-            <div className="bannerinner">
-              <img
-                className="img1"
-                src={require("../../static/image/banner1.png").default}
-              />
-              <img
-                className="img2"
-                src={require("../../static/image/banner2.png").default}
-              />
-              <img
-                className="img3"
-                src={require("../../static/image/banner3.png").default}
-              />
-              <img
-                className="img4"
-                src={require("../../static/image/banner4.png").default}
-              />
-              <img
-                className="img5"
-                src={require("../../static/image/banner5.png").default}
-              />
-            </div>
-            <ul className="text">
-              <div className="textcontainer">
-                <span style={{ color: "#f2aa3f" }}>H</span>
-                <span style={{ color: "#46e7b2" }}>A</span>
-                <span style={{ color: "#79eeef" }}>P</span>
-                <span style={{ color: "#f65844" }}>P</span>
-                <span style={{ color: "#f0a3c6" }}>Y</span>
+          {this.props.location.pathname == "/first" ? (
+            ""
+          ) : (
+            <div className="bannerwrap">
+              {/* <div className="line"></div>
+              <div className="bannerinner">
+                <img
+                  className="img1"
+                  src={require("../../static/image/banner1.png").default}
+                />
+                <img
+                  className="img2"
+                  src={require("../../static/image/banner2.png").default}
+                />
+                <img
+                  className="img3"
+                  src={require("../../static/image/banner3.png").default}
+                />
+                <img
+                  className="img4"
+                  src={require("../../static/image/banner4.png").default}
+                />
+                <img
+                  className="img5"
+                  src={require("../../static/image/banner5.png").default}
+                />
               </div>
-            </ul>
-            <div className="line2"></div>
-            <div className="bannerinner2">
-              <img
-                className="img1"
-                src={require("../../static/image/banner6.png").default}
-              />
-              <img
-                className="img2"
-                src={require("../../static/image/banner3.png").default}
-              />
-              <img
-                className="img3"
-                src={require("../../static/image/banner7.png").default}
-              />
-              <img
-                className="img4"
-                src={require("../../static/image/banner4.png").default}
-              />
-              <img
-                className="img5"
-                src={require("../../static/image/banner5.png").default}
-              />
-              <img
-                className="img5"
-                src={require("../../static/image/banner2.png").default}
-              />
-              <img
-                className="img5"
-                src={require("../../static/image/banner1.png").default}
-              />
-              <img
-                className="img5"
-                src={require("../../static/image/banner7.png").default}
-              />
-            </div>
-            <ul className="text2">
-              <div className="textcontainer">
-                <span style={{ color: "#c7ed4e" }}>B</span>
-                <span style={{ color: "#79eeef" }}>I</span>
-                <span style={{ color: "#f4ea29" }}>R</span>
-                <span style={{ color: "#f2aa3f" }}>T</span>
-                <span style={{ color: "#f0a3c6" }}>H</span>
-                <span style={{ color: "#46e7b2" }}>D</span>
-                <span style={{ color: "#f2aa3f" }}>A</span>
-                <span style={{ color: "#f4ea29" }}>Y</span>
+              <ul className="text">
+                <div className="textcontainer">
+                  <span style={{ color: "#f2aa3f" }}>H</span>
+                  <span style={{ color: "#46e7b2" }}>A</span>
+                  <span style={{ color: "#79eeef" }}>P</span>
+                  <span style={{ color: "#f65844" }}>P</span>
+                  <span style={{ color: "#f0a3c6" }}>Y</span>
+                </div>
+              </ul>
+              <div className="line2"></div>
+              <div className="bannerinner2">
+                <img
+                  className="img1"
+                  src={require("../../static/image/banner6.png").default}
+                />
+                <img
+                  className="img2"
+                  src={require("../../static/image/banner3.png").default}
+                />
+                <img
+                  className="img3"
+                  src={require("../../static/image/banner7.png").default}
+                />
+                <img
+                  className="img4"
+                  src={require("../../static/image/banner4.png").default}
+                />
+                <img
+                  className="img5"
+                  src={require("../../static/image/banner5.png").default}
+                />
+                <img
+                  className="img5"
+                  src={require("../../static/image/banner2.png").default}
+                />
+                <img
+                  className="img5"
+                  src={require("../../static/image/banner1.png").default}
+                />
+                <img
+                  className="img5"
+                  src={require("../../static/image/banner7.png").default}
+                />
               </div>
-            </ul>
-            <div className="bubble">
-              <img src={require("../../static/image/bubble.png").default}></img>
+              <ul className="text2">
+                <div className="textcontainer">
+                  <span style={{ color: "#c7ed4e" }}>B</span>
+                  <span style={{ color: "#79eeef" }}>I</span>
+                  <span style={{ color: "#f4ea29" }}>R</span>
+                  <span style={{ color: "#f2aa3f" }}>T</span>
+                  <span style={{ color: "#f0a3c6" }}>H</span>
+                  <span style={{ color: "#46e7b2" }}>D</span>
+                  <span style={{ color: "#f2aa3f" }}>A</span>
+                  <span style={{ color: "#f4ea29" }}>Y</span>
+                </div>
+              </ul>
+              <div className="bubble">
+                <img
+                  src={require("../../static/image/bubble.png").default}
+                ></img>
+              </div>
+              <div className="bubble2">
+                <img
+                  src={require("../../static/image/bubble.png").default}
+                ></img>
+              </div>
+              <div className="fireworks">
+                <img
+                  src={require("../../static/image/fireworks.png").default}
+                />
+              </div>
+              <div className="fireworks2">
+                <img
+                  src={require("../../static/image/fireworks.png").default}
+                />
+              </div> */}
             </div>
-            <div className="bubble2">
-              <img src={require("../../static/image/bubble.png").default}></img>
-            </div>
-            <div className="fireworks">
-              <img src={require("../../static/image/fireworks.png").default} />
-            </div>
-            <div className="fireworks2">
-              <img src={require("../../static/image/fireworks.png").default} />
-            </div> */}
-          </div>
+          )}
+
           <div className="innerpage">
             <Switch>
               <Route exact path="/first" component={FirstPage}></Route>
