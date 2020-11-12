@@ -27,10 +27,21 @@ export class SecondPage extends Component {
       method: "get",
       url: "/textimg2",
     }).then((res) => {
-      // console.log(res.data.data);
+      console.log(res);
       this.setState({
         textArrtwo: res.data.data,
       });
+    });
+    axios({
+      method: "post",
+      url: "/getGoods",
+      data: {
+        id: 2,
+      },
+    }).then((data) => {
+      //成功的回调函数，返回的是增加的数据
+      // console.log(data.data.data);
+      //  this.url = data.data.data[0].goodsImg;
     });
   }
   swiperFun = () => {
@@ -51,6 +62,7 @@ export class SecondPage extends Component {
     let img = document.querySelectorAll(".imgOne")[e.target.dataset.value];
     img.style.width = "200px";
     img.style.height = "200px";
+    img.style.backgroundPosition = "center";
     img.style.position = "absolute";
     img.style.left = "0";
     img.style.right = "0";
@@ -63,6 +75,7 @@ export class SecondPage extends Component {
     let img = document.querySelectorAll(".imgTwo")[e.target.dataset.value];
     img.style.width = "200px";
     img.style.height = "200px";
+    img.style.backgroundPosition = "center";
     img.style.position = "absolute";
     img.style.left = "0";
     img.style.right = "0";
@@ -106,10 +119,7 @@ export class SecondPage extends Component {
         onClick={this.returnFun}
       >
         {/* 照片轮播图 */}
-        <div
-          className="picbanner"
-          style={{ width: "100%", height: "250px"}}
-        >
+        <div className="picbanner" style={{ width: "100%", height: "250px" }}>
           <div className="swiper-container">
             <div className="swiper-wrapper">
               {/* <div className="swiper-slide">
@@ -120,37 +130,27 @@ export class SecondPage extends Component {
                
                 <img src={require("../../static/image2/two.png").default} />
               </div> */}
-              <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
+              {/* <div className="swiper-slide">
                 <img src={require("../../static/image2/four.png").default} />
               </div>
               <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
                 <img src={require("../../static/image2/three.png").default} />
-                
               </div>
               <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
                 <img src={require("../../static/image2/five.png").default} />
               </div>
               <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
                 <img src={require("../../static/image2/six.png").default} />
               </div>
               <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
                 <img src={require("../../static/image2/seven.png").default} />
               </div>
               <div className="swiper-slide">
-                {" "}
-                {/* slide3 */}
                 <img src={require("../../static/image2/eight.png").default} />
               </div>
+              <div className="swiper-slide">
+                <img src={require("../../static/image2/nine.jpg").default} />
+              </div> */}
             </div>
             <div className="swiper-pagination"></div>
           </div>
@@ -164,8 +164,19 @@ export class SecondPage extends Component {
                 return (
                   <div key={index} className="textwrap">
                     {/* 文字 */}
-                    <div className="text">{item.year}</div>
-                    <div className="text">{item.text}</div>
+                    <div className="text" style={{ color: "#666" }}>
+                      {item.year}
+                    </div>
+                    <div
+                      className="text"
+                      style={{
+                        fontSize: "12px",
+                        color: "#999",
+                        margin: "5px 0",
+                      }}
+                    >
+                      {item.text}
+                    </div>
                     <div className="imgwrap">
                       <img
                         data-value={index}
@@ -188,8 +199,19 @@ export class SecondPage extends Component {
                 return (
                   <div key={index} className="textwrap">
                     {/* 文字 */}
-                    <div className="text">{item.year}</div>
-                    <div className="text">{item.text}</div>
+                    <div className="text" style={{ color: "#666" }}>
+                      {item.year}
+                    </div>
+                    <div
+                      className="text"
+                      style={{
+                        fontSize: "12px",
+                        color: "#999",
+                        margin: "5px 0",
+                      }}
+                    >
+                      {item.text}
+                    </div>
                     <div className="imgwrap">
                       <img
                         data-value={index}

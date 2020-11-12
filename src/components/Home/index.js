@@ -49,7 +49,7 @@ export class Home extends Component {
             ""
           ) : (
             <div className="bannerwrap">
-              <div className="line"></div>
+              {/* <div className="line"></div>
               <div className="bannerinner">
                 <img
                   className="img1"
@@ -147,7 +147,7 @@ export class Home extends Component {
                 <img
                   src={require("../../static/image/fireworks.png").default}
                 />
-              </div>
+              </div> */}
             </div>
           )}
 
@@ -230,7 +230,9 @@ export class Home extends Component {
                 offline(),
                 this.activeFun(3),
                 setTimeout(() => {
-                  this.activeFun(2);
+                  this.props.location.pathname == "/first"
+                    ? this.activeFun(1)
+                    : this.activeFun(2);
                 }, 3000)
               );
               // return this.props.history.push("third"), this.activeFun(3);
