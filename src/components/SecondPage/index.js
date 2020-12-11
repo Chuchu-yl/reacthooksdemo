@@ -85,7 +85,6 @@ export class SecondPage extends Component {
     // console.log(img);
   };
   returnFun = () => {
-    console.log("111111111111", this.state.currentIndex);
     let img = document.querySelectorAll(".imgOne");
     console.log(img);
     for (var i = 0; i < img.length; i++) {
@@ -110,7 +109,6 @@ export class SecondPage extends Component {
 
   render() {
     const { textArr, textArrtwo } = this.state;
-    // console.log(textArr);
 
     return (
       <div
