@@ -139,9 +139,7 @@ export class SecondPage extends Component {
               <div className="swiper-slide">
                 <img src={require("../../static/image2/five.png").default} />
               </div>
-              <div className="swiper-slide">
-                <img src={require("../../static/image2/six.png").default} />
-              </div>
+
               <div className="swiper-slide">
                 <img src={require("../../static/image2/seven.png").default} />
               </div>

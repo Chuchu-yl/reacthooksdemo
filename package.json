@@ -163,5 +163,8 @@
         }
       ]
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
   }
 }

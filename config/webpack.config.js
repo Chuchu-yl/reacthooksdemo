@@ -60,6 +60,7 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+// 编译less文件，在这里配置 百度搜的 现在忘了
 const lessRegex = /\.less$/;
 const lessModuleRegex = /\.module\.less$/;
 const hasJsxRuntime = (() => {

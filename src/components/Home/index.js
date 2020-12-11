@@ -49,8 +49,8 @@ export class Home extends Component {
             ""
           ) : (
             <div className="bannerwrap">
-              {/* <div className="line"></div>
-              <div className="bannerinner">
+              {/* <div className="line"></div> */}
+              {/* <div className="bannerinner">
                 <img
                   className="img1"
                   src={require("../../static/image/banner1.png").default}

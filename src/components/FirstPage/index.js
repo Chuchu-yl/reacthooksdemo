@@ -99,13 +99,13 @@ export class FirstPage extends Component {
     //计算相差秒数
     var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
     var seconds = Math.round(leave3 / 1000);
-    console.log(this.state.andrOrios);
+    // console.log(this.state.andrOrios);
     return (
       <div className="firstwrap">
         {/* 时间间隔文字 */}
         <div className="timecontrol">
           <div className="textwrap">
-            <div>我们在一起</div>
+            {/* <div>我们在一起</div> */}
             <br></br>
             <div style={{ width: "100%" }}>
               <img
