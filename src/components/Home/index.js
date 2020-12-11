@@ -7,7 +7,7 @@ import { Toast } from "antd-mobile";
 
 import "./style.less";
 function offline() {
-  Toast.offline("这是一个测试", 3);
+  Toast.offline("哎呀，还没有想好做什么呢，可以私下告诉我哦~", 3);
 }
 export class Home extends Component {
   state = {
